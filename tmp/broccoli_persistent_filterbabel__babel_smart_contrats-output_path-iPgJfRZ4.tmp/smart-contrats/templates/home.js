@@ -1,0 +1,8 @@
+define("smart-contrats/templates/home", ["exports"], function (exports) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.HTMLBars.template({ "id": "WBaczR2S", "block": "{\"statements\":[[0,\"\\n\\n\"],[11,\"div\",[]],[15,\"class\",\"user-panel\"],[15,\"style\",\"position: relative !important; float: right;\"],[13],[0,\"\\n  \"],[11,\"div\",[]],[15,\"class\",\"nav navbar-nav user-header\"],[5,[\"action\"],[[28,[null]],\"togglePanel\"],[[\"target\"],[\"view\"]]],[13],[0,\"\\n    \"],[11,\"a\",[]],[15,\"class\",\"dropdown-toggle user-dropdown\"],[15,\"data-toggle\",\"dropdown\"],[15,\"data-hover\",\"dropdown\"],[15,\"data-close-others\",\"true\"],[15,\"data-original-\",\"\"],[15,\"title\",\"\"],[15,\"title\",\"\"],[13],[0,\"\\n    \"],[11,\"div\",[]],[15,\"class\",\"user-atts\"],[13],[0,\"\\n      \"],[11,\"div\",[]],[15,\"class\",\"username\"],[13],[1,[28,[\"controller\",\"user\",\"name\"]],false],[14],[0,\"\\n      \"],[11,\"div\",[]],[15,\"class\",\"userrole\"],[13],[1,[28,[\"controller\",\"user\",\"role\"]],false],[14],[0,\"\\n    \"],[14],[0,\"\\n    \"],[11,\"div\",[]],[15,\"class\",\"user-avatar\"],[13],[14],[0,\"\\n    \"],[11,\"i\",[]],[15,\"class\",\"fa fa-angle-down fa-lg\"],[13],[14],[0,\"\\n  \"],[14],[0,\"\\n  \"],[11,\"ul\",[]],[15,\"class\",\"dropdown-menu\"],[13],[0,\"\\n   \"],[1,[26,[\"verify-menu\"]],false],[0,\" \\n  \"],[14],[0,\"\\n\"],[14],[0,\"\\n\"],[14]],\"locals\":[],\"named\":[],\"yields\":[],\"hasPartials\":false}", "meta": { "moduleName": "smart-contrats/templates/home.hbs" } });
+});

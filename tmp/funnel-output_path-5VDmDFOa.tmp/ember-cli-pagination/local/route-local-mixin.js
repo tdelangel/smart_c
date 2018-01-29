@@ -1,0 +1,1 @@
+/Users/delangel/Projects/smartContrats/tmp/funnel-input_base_path-QpAPZD1B.tmp/local/route-local-mixin.js

@@ -1,0 +1,1 @@
+/Users/delangel/Projects/smartContrats/tmp/funnel-input_base_path-9EZWI40S.tmp/index.js

@@ -1,0 +1,1 @@
+/Users/delangel/Projects/smartContrats/app/app.js

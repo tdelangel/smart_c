@@ -1,0 +1,99 @@
+
+
+<main class="page">
+  <div class="container">
+   <h3 style="margin-top: 78px;"> Planeación <p><h5>Proyectos registrados</h5></p> </h3>
+   <hr class="red">
+    <button data-toggle="modal" data-target="#newProject" class="btn btn-default btn-sm " type="button">Nuevo proyecto</button>
+  <div id="newProject" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Nuevo proyecto</h4>
+      </div>
+      <div class="modal-body">
+         <form role="form">
+    <div class="form-group">
+      <label class="control-label" for="email-01">Clave de proyecto:</label>
+      <input class="form-control" id="cp_01" placeholder="Clave de proyecto" type="text">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="password-01">Clave de contratación:</label>
+      <input class="form-control" id="cc-01" placeholder="Clave de contratación" type="text">
+    </div> 
+    <div class="form-group">
+      <label class="control-label" for="password-01">Titulo de la contratación:</label>
+      <input class="form-control" id="tc-01" placeholder="Titulo de la contratación" type="text">
+    </div> 
+    <div class="form-group">
+      <label class="control-label" for="password-01">Titulo de la contratación:</label>
+      <input class="form-control" id="tc-01" placeholder="Titulo de la contratación" type="text">
+    </div> 
+    <div class="form-group">
+      <label class="control-label" for="password-01">Descripción:</label>
+      <textarea class="form-control" rows="3"></textarea>
+    </div>  
+    <div class="form-group">
+      <label class="control-label" for="password-01">Presupuesto:</label>
+      <input class="form-control" id="tc-01" placeholder="Titulo de la contratación" type="text">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="file-01">Estudio de mercado:</label>
+      <input id="file-01" type="file">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="file-01">Estudio de factibilidad:</label>
+      <input id="file-01" type="file">
+    </div> 
+    <div class="form-group">
+      <label class="control-label" for="file-01">Proyecto:</label>
+      <input id="file-01" type="file">
+    </div>
+       <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+ 
+  </form>
+      </div>
+     
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+ <div>&nbsp;</div>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Clave de proyecto</th>
+        <th>Clave de contratación</th>
+        <th>Titulo de la contratación</th>
+        <th>Presupuesto</th>
+        <th>Estudio de mercado</th>
+        <th>Estudio de factibilidad</th>
+        <th>Proyecto</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Celda de cuadro</td>
+        <td>Celda de cuadro</td>
+        <td>Celda de cuadro</td>
+        <td>Celda de cuadro</td>
+        <td>Celda de cuadro</td>
+        <td>Celda de cuadro</td>
+        <td>Celda de cuadro</td>
+        <td class=" col-md-2"> <div class="btn-group">
+           <button {{action 'isEditingEmpresa' empresa}}  type="button" class="btn btn-default btn-sm glyphicon glyphicon-edit"></button>
+           <button  {{action 'destroyEmpresa' empresa}} type="button" class="btn btn-default glyphicon glyphicon-trash btn-sm"></button>
+          
+           <button data-toggle="modal" data-target="#modaledit" type="button" class="btn btn-default glyphicon glyphicon-eye-open btn-sm"></button>
+         </div> </td>
+      </tr>   
+    </tbody>
+  </table>
+</div>
+</main>

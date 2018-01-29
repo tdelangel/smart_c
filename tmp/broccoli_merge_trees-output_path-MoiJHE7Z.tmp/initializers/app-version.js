@@ -1,0 +1,1 @@
+/Users/delangel/Projects/smartContrats/tmp/broccoli_merge_trees-input_base_path-3XGTmsP8.tmp/2/initializers/app-version.js

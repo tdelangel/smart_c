@@ -1,0 +1,1 @@
+/Users/delangel/Projects/smartContrats/tmp/funnel-input_base_path-QZ23kSKN.tmp/instance-initializers/initialize-store-service.js

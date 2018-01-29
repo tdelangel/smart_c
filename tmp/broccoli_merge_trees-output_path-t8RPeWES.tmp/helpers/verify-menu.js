@@ -1,0 +1,1 @@
+/Users/delangel/Projects/smartContrats/app/helpers/verify-menu.js

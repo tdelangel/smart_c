@@ -1,0 +1,1 @@
+/Users/delangel/Projects/smartContrats/tmp/creator-output_path-vHJuE3fp.tmp/version.js

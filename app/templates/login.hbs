@@ -1,0 +1,29 @@
+ <main class="login-wrapper container" role="main">
+ 	<section class="login-sec col-lg-6">
+ 		<div class="container" style="margin-top: 50px">
+ 			<form class="col-lg-6" role="form ">
+ 				<h4>Autenticación</h4>
+  <div class="form-group">
+    <label class="control-label" for="email-01">Correo electrónico:</label>
+     	{{input type="text" class="form-control" id="loginUser" value=identification placeholder="usuario"}}
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="password-01">Contraseña</label>
+
+{{input type="password" class="form-control" id="loginPassword" value=password placeholder="Contraseña"}}
+  </div>
+ 
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox">
+      Acepto los términos
+    </label>
+  </div>
+ 
+  <button  {{action 'authenticate'}} type="button" class="btn btn-primary pull-right">Enviar</button>
+</form>
+ </div>
+ </section>
+{{verify-menu}} 
+</main>

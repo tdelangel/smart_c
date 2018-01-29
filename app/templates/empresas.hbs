@@ -1,0 +1,215 @@
+
+  <div class="container content">
+    <h3>Empresas</h3>
+    <div class="content col-md-8 pull-right">
+      <form class="form-inline" role="form">
+        <div class="form-group ">
+         <button class="btn btn-default pull-right btn-sm" type="button">
+          <span class="glyphicon glyphicon-search"></span>
+          Buscar  
+        </button>
+        <input class="form-control pull-right" id="email-02" placeholder="Busqueda" type="text">
+      </div>
+
+      <button class="pull-right btn btn-default btn-sm" type="button" data-toggle="modal" data-target="#modalEmpresas">Agregar empresa</button> 
+    </form>
+    <br/>
+  </div>
+
+  <!-- /.modal-agregar empresas -->
+  <div id="modalEmpresas" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Nueva Empresa</h4>
+        </div>
+        <div class="modal-body">
+          <p> 
+            <form role="form">
+           <!--
+            <div class="form-group">
+              <label class="control-label" for="password-01">Nombre comercial:</label>
+              {{input class="form-control" value=nComercial placeholder="Nombre comercial"}}
+            </div> 
+          -->
+           <div class="form-group">
+              <label class="control-label" for="password-01">Rfc:</label>
+              {{input class="form-control" value=nRfc placeholder="Rfc"}}
+            </div> 
+
+            <div class="form-group">
+              <label class="control-label" for="password-01">Nombre legal:</label>
+              {{input class="form-control" value=nLegal placeholder="Nombre legal"}}
+            </div> 
+             <div class="form-group">
+              <label class="control-label" for="password-01">Telefono:</label>
+              {{input class="form-control" value=nTelefono placeholder="Telefono"}}
+            </div>  
+              <div class="form-group">
+              <label class="control-label" for="password-01">Pagina web:</label>
+              {{input class="form-control" value=nPaginaw placeholder="Pagina web"}}
+            </div> 
+          </form>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button {{action 'createEmpresa' }} type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!-- /.modal-editar empresas -->
+
+  <div id="modalEditEmpresas" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Nueva Empresa</h4>
+
+        </div>
+        <div class="modal-body">
+          <p> 
+    <form role="form">
+           <!--
+            <div class="form-group">
+              <label class="control-label" for="password-01">Nombre comercial:</label>
+              {{input class="form-control" value=nComercial placeholder="Nombre comercial"}}
+            </div> 
+          -->
+           <div class="form-group">
+              <label class="control-label" for="password-01">Rfc:</label>
+              {{input class="form-control" value=eRfc placeholder="Rfc"}}
+              {{input type = 'hidden' class="form-control" value=eId placeholder="Rfc"}}
+            </div> 
+
+            <div class="form-group">
+              <label class="control-label" for="password-01">Nombre legal:</label>
+              {{input class="form-control" value=eLegal placeholder="Nombre legal"}}
+            </div> 
+             <div class="form-group">
+              <label class="control-label" for="password-01">Telefono:</label>
+              {{input class="form-control" value=eTelefono placeholder="Telefono"}}
+            </div>  
+              <div class="form-group">
+              <label class="control-label" for="password-01">Pagina web:</label>
+              {{input class="form-control" value=ePaginaw placeholder="Pagina web"}}
+            </div> 
+          </form>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          <button {{action 'editEmpresa' }} type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+
+        
+        <th>ID de Registro</th>
+        <th>Rfc</th>
+         <th>nombre legal</th>
+        <th>pagina web</th>
+       <th>telefono</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each  model  as |empresa|}}
+      <tr>
+        <th> {{empresa.id}} </th>
+        <td>{{empresa.rfc}}</td>
+        <td>{{empresa.razon_social}}</td>
+        <td>{{empresa.pagina_web}}</td>
+        <td>{{empresa.telefono}}</td>
+        <td class=" col-md-2">
+          <div class="btn-group">
+            <button {{action 'modalEditEmpresa' empresa}} type="button" class="btn btn-default glyphicon glyphicon-edit btn-sm"></button>
+            <button  {{action 'destroyEmpresa' empresa}} type="button" class="btn btn-default glyphicon glyphicon-trash btn-sm"></button>
+            <button data-toggle="modal" data-target="#modalView" type="button" class="btn btn-default glyphicon glyphicon-eye-open btn-sm"></button>
+          </div> 
+        </td>
+      </tr>  
+      {{/each}}
+    </tbody>
+  </table>
+  <br>
+  {{#each-in model.meta.pagination as |key value|}}
+  {{link-to key "empresas" (query-params page=value.number)}}
+  {{/each-in}}
+
+  <br>
+
+  {{#each count as |number|}}
+  {{#if (eq number model.meta.pagination.self.number) }}
+  {{ number }}
+  {{else}}
+  {{link-to number "articles" (query-params page=number)}}
+  {{/if}}
+  {{/each}}
+  <div id="modaledit" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Editar Empresa</h4>
+        </div>
+        <div class="modal-body">
+
+         <form role="form">
+          <div class="form-group">
+            <label class="control-label" for="email-01">Id de registro:</label>
+            {{input class="form-control" value=idRegistro placeholder="Id registro"}}      
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="password-01">Nombre comercial:</label>
+            {{input class="form-control" value=nComercial placeholder="Nombre comercial"}}
+          </div> 
+          <div class="form-group">
+            <label class="control-label" for="password-01">Nombre legal:</label>
+            {{input class="form-control" value=nLegal placeholder="Nombre legal"}}
+          </div> 
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button {{action 'viewEmpresa' empresa}}  type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <div id="modalView" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Editar Empresa</h4>
+        </div>
+        <div class="modal-body">
+         <form role="form">
+          <div class="form-group">
+            <label class="control-label" for="email-01">Id de registro:</label>
+            <p class="control-label" for="email-01">200130043287328</p>     
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="password-01">Nombre comercial:</label>
+            <p class="control-label" for="email-01">Este es</p>    
+          </div> 
+          <div class="form-group">
+            <label class="control-label" for="password-01">Nombre legal:</label>
+            <p class="control-label" for="email-01">Telcel</p>    
+          </div> 
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button {{action 'viewEmpresa' empresa}}  type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  </div>
